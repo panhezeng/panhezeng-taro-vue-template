@@ -5,20 +5,12 @@
   </view>
 </template>
 
-<script>
-import NumberDisplay from "../../components/NumberDisplay.vue";
-import NumberSubmit from "../../components/NumberSubmit.vue";
-
-export default {
-  name: "Index",
-  components: {
-    NumberDisplay,
-    NumberSubmit,
-  },
-};
+<script setup lang="ts">
+import NumberDisplay from "@/components/NumberDisplay.vue";
+import NumberSubmit from "@/components/NumberSubmit.vue";
 </script>
 
-<style>
+<style lang="less">
 .index {
   text-align: center;
   color: #2c3e50;

@@ -3,33 +3,24 @@
   <button @tap="addNumber">Add new number</button>
 </template>
 
-<script>
+<script setup lang="ts">
 import { ref } from "vue";
 import { useStore } from "vuex";
-import { storeKey } from "../store";
-import { names as namesNumbers } from "../store/numbers";
+import { storeKey } from "@/store";
+import { names as namesNumbers } from "@/store/numbers";
 
-export default {
-  setup() {
-    const store = useStore(storeKey);
-    const number = ref(0);
+const store = useStore(storeKey);
+const number = ref(0);
 
-    function addNumber() {
-      store.dispatch(
-        namesNumbers.module + "/" + namesNumbers.actions.ADD_NUMBER,
-        Number(number.value)
-      );
-    }
-
-    return {
-      number,
-      addNumber,
-    };
-  },
-};
+function addNumber() {
+  store.dispatch(
+    namesNumbers.module + "/" + namesNumbers.actions.ADD_NUMBER,
+    Number(number.value)
+  );
+}
 </script>
 
-<style>
+<style lang="less">
 .input {
   border: 1px solid lightgray;
   margin: 10px;
