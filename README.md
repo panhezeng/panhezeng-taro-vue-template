@@ -6,28 +6,19 @@ webpack chain
 
 ## IDE
 
+配置 jsconfig.json , tsconfig.json 文件，实现 js 和 ts 代码的智能跳转和提示
+
 ### WebStorm
 
 搜索 ESLint , 勾选 Automatic ESLint 和 Run eslint -- fix on save
 
-Languages and Frameworks | JavaScript | prettier `{**/*,*}.{js,vue,ts,tsx,html,css,less,md,json}`
+Languages & Frameworks | JavaScript | prettier `{**/*,*}.{js,vue,ts,tsx,html,css,less,md,json}`
+
+Languages & Frameworks | Stylelint Sheets | Stylelint
 
 ### VSCode
 
-配置 jsconfig.json 文件，实现智能跳转和提示
-
-安装 eslint , prettier, vetur 插件 (https://quasar.dev/start/vs-code-configuration#Prettier-ES-Lint-rules)
-
-配置
-
-```
-
-    "vetur.validation.template": false,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
-
-```
+安装 eslint , prettier, volar 插件
 
 ## 环境
 
