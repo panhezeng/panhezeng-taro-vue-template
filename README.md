@@ -10,7 +10,7 @@ webpack chain
 
 搜索 ESLint , 勾选 Automatic ESLint 和 Run eslint -- fix on save
 
-Languages and Frameworks | JavaScript | prettier {\*_/_,\*}.{js,vue,ts,tsx,html,css,less,md,json}
+Languages and Frameworks | JavaScript | prettier `{**/*,*}.{js,vue,ts,tsx,html,css,less,md,json}`
 
 ### VSCode
 
