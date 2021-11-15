@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "outDir": "lib",
+//    "noUnusedLocals": true,
+//    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    //    "noEmit": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    //    "target": "esnext",
+    //    "module": "esnext",
+    "target": "es6",
+    "module": "commonJS",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "rootDir": "./",
+    //        "typeRoots": ["./node_modules/@types"],
+    "types": [ "webpack-env"],
+    "paths": {
+      "src/*": ["src/*"],
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom"]
+  },
+  "include": ["src*/**/*.ts", "src*/**/*.tsx", "src*/**/*.vue"],
+  "exclude": ["dist/**/*", "node_modules"]
+}
