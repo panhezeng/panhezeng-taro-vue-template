@@ -1,7 +1,7 @@
 import { createApp } from "vue";
-import store, { storeKey } from "./store";
-
-import "./app.less";
+import store, { storeKey } from "@/store";
+import "@/app.less";
+import "@/utils/request";
 
 const App = createApp({
   // onShow (options) {},
