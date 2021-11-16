@@ -1,7 +1,7 @@
 <template>
   <view ref="rootElement" class="example-template-index-page">
     <button @tap="goto">go to index page</button>
-    <view>页面名：template-index</view>
+    <view>页面名：example-template-index-page</view>
     <view>rootElementTagName:{{ rootElementTagName }}</view>
     <template-comp
       :user="compProps.user"
