@@ -1,6 +1,7 @@
 declare namespace NodeJS {
   interface ProcessEnv {
     NODE_ENV: "production" | "development" | string;
+    API_BASE_URL: string;
     TARO_ENV:
       | "weapp"
       | "swan"

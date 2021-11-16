@@ -14,6 +14,8 @@ module.exports = {
     process: "readonly",
     Capacitor: "readonly",
     chrome: "readonly",
+    defineProps: "readonly",
+    defineEmits: "readonly",
   },
   parser: "@babel/eslint-parser",
   parserOptions: {

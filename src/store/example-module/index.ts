@@ -15,7 +15,7 @@ export const names = {
 };
 
 const initState = {
-  example: "",
+  example: "example",
   exampleArray: [] as any[],
   exampleObject: {} as { [key: string]: any },
 };

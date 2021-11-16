@@ -1,11 +1,6 @@
 import { InjectionKey } from "vue";
 
-import {
-  createStore,
-  MutationTree,
-  Store as VuexStore,
-  useStore as vuexUseStore,
-} from "vuex";
+import { createStore, MutationTree, Store as VuexStore } from "vuex";
 
 import requireContext from "@/utils/require-context";
 
@@ -65,7 +60,3 @@ const store = createStore<StateType>({
 });
 
 export default store;
-
-export function useStore() {
-  return vuexUseStore(storeKey);
-}

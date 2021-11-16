@@ -1,14 +1,8 @@
 <template>
-  <view class="index">
-    <NumberDisplay />
-    <NumberSubmit />
-  </view>
+  <view class="index"> </view>
 </template>
 
-<script setup lang="ts">
-import NumberDisplay from "@/components/NumberDisplay.vue";
-import NumberSubmit from "@/components/NumberSubmit.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style lang="less">
 .index {
