@@ -1,12 +1,9 @@
 <template>
   <view ref="rootElement" class="example-template-index-page">
     <button @tap="goto">go to index page</button>
-    <view>页面名：example-template-index-page</view>
+    <view>页面名：template-index</view>
     <view>rootElementTagName:{{ rootElementTagName }}</view>
-    <template-comp
-      :user="compProps.user"
-      @template-comp-increment="eventHandler"
-    />
+    <template-comp v-bind="compProps" @template-comp-danger="eventHandler" />
     <view>stateExample:{{ example }}</view>
     <view>eventTip:{{ eventTip }}</view>
   </view>
@@ -33,6 +30,7 @@
 <!--} from "@/store/example-module";-->
 
 <!--import TemplateComp from "@/components/example/TemplateComp.vue";-->
+<!--import { Todo } from "@/components/example/models";-->
 
 <!--export default defineComponent({-->
 <!--  components: {-->
@@ -59,6 +57,7 @@
 <!--        firstName: "s",-->
 <!--        lastName: "b",-->
 <!--      },-->
+<!--      todos: [{ id: 1, content: "一" }] as Todo[],-->
 <!--    };-->
 
 <!--    const example = ref(state.value.example);-->
@@ -119,7 +118,9 @@ import {
 } from "@/store/example-module";
 
 import TemplateComp from "@/components/example/TemplateComp.vue";
+import { Todo } from "@/components/example/models";
 
+/* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars */
 const internalInstance = getCurrentInstance()!;
 const publicInstance = internalInstance.proxy;
 const store = useStore(storeKey);
@@ -127,6 +128,8 @@ const store = useStore(storeKey);
 const state = computed<StateTypeExample>(
   () => store.state[NamesExample.module]
 );
+
+/* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars */
 
 // store.commit(NamesExample.module + "/" + NamesExample.mutations.SOME_MUTATION)
 // store.dispatch(NamesExample.module + "/" + NamesExample.actions.SOME_ACTION)
@@ -138,6 +141,7 @@ const compProps = {
     firstName: "s",
     lastName: "b",
   },
+  todos: [{ id: 1, content: "一" }] as Todo[],
 };
 
 const example = ref(state.value.example);

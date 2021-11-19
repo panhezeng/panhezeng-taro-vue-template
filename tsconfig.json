@@ -34,5 +34,4 @@
     "lib": ["esnext", "dom"]
   },
   "include": ["src*/**/*.ts", "src*/**/*.tsx", "src*/**/*.vue"],
-  "exclude": ["dist/**/*", "node_modules"]
 }
