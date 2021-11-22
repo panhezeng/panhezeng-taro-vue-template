@@ -14,6 +14,7 @@ module.exports = {
     process: "readonly",
     Capacitor: "readonly",
     chrome: "readonly",
+    wx: "readonly",
     defineProps: "readonly",
     defineEmits: "readonly",
   },

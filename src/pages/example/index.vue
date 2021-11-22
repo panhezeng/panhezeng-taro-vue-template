@@ -20,7 +20,7 @@ import Taro from "@tarojs/taro";
 import { path } from "@/app.config";
 import {
   StateType as StateTypeExample,
-  names as NamesExample,
+  names as namesExample,
 } from "@/store/example-module";
 
 import TemplateComp from "@/components/example/TemplateComp.vue";
@@ -33,11 +33,11 @@ const store = useStore(storeKey);
 /* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars */
 
 const stateExample = computed<StateTypeExample>(
-  () => store.state[NamesExample.module]
+    () => store.state[namesExample.module]
 );
 
-// store.commit(NamesExample.module + "/" + NamesExample.mutations.SOME_MUTATION)
-// store.dispatch(NamesExample.module + "/" + NamesExample.actions.SOME_ACTION)
+// store.commit(namesExample.module + "/" + namesExample.mutations.SOME_MUTATION)
+// store.dispatch(namesExample.module + "/" + namesExample.actions.SOME_ACTION)
 
 const rootElement = ref<HTMLElement | null>(null);
 const rootElementTagName = ref("");
@@ -65,11 +65,11 @@ onMounted(() => {
   Taro.nextTick(() => {
     // console.log("nextTick");
   });
-  Taro.eventCenter.on(router.onReady, () => {
-    // console.log("onReady");
-  });
   Taro.eventCenter.on(router.onShow, () => {
     // console.log("onShow");
+  });
+  Taro.eventCenter.on(router.onReady, () => {
+    // console.log("onReady");
   });
 
   // console.log("pages onMounted ==============");

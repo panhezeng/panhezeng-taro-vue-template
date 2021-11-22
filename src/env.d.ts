@@ -14,3 +14,7 @@ declare namespace NodeJS {
       | "jd";
   }
 }
+
+declare const wx: {
+  [key: string]: any;
+};

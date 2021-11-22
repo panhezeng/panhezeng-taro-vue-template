@@ -60,7 +60,7 @@ interface User {
 /* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars,@typescript-eslint/require-await */
 const internalInstance = getCurrentInstance()!;
 const publicInstance = internalInstance.proxy;
-const $store = useStore(storeKey);
+const store = useStore(storeKey);
 /* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars,@typescript-eslint/require-await */
 
 const props = defineProps({
@@ -96,11 +96,11 @@ onMounted(() => {
   Taro.nextTick(() => {
     // console.log("nextTick", !!getElement());
   });
-  Taro.eventCenter.on(router.onReady, () => {
-    // console.log("onReady", !!getElement());
-  });
   Taro.eventCenter.on(router.onShow, () => {
     // console.log("onShow", !!getElement());
+  });
+  Taro.eventCenter.on(router.onReady, () => {
+    // console.log("onReady", !!getElement());
   });
 });
 </script>
