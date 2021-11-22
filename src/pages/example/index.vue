@@ -33,7 +33,7 @@ const store = useStore(storeKey);
 /* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars */
 
 const stateExample = computed<StateTypeExample>(
-    () => store.state[namesExample.module]
+  () => store.state[namesExample.module]
 );
 
 // store.commit(namesExample.module + "/" + namesExample.mutations.SOME_MUTATION)
