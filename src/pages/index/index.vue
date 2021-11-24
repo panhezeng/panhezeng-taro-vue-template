@@ -71,7 +71,7 @@ function goto() {
 }
 const { onShow, onReady, weappLifecycle } = useWeappLifecycle();
 onShow(() => {
-  console.log("index-page onShow", data);
+  console.log("index-page onShow");
 });
 onReady(() => {
   console.log("index-page onReady");
