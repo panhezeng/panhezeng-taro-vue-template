@@ -3,11 +3,24 @@ import store, { storeKey } from "@/store";
 import "@/app.less";
 import "@/utils/request";
 
-const App = createApp({
+const app = createApp({
   // onShow (options) {},
   // 入口组件不需要实现 render 方法，即使实现了也会被 taro 所覆盖
 });
 
-App.use(store, storeKey);
+app.use(store, storeKey);
 
-export default App;
+app.mixin({
+  onShow() {
+    if (this.weappLifecycle) {
+      this.weappLifecycle.onShow();
+    }
+  },
+  onReady() {
+    if (this.weappLifecycle) {
+      this.weappLifecycle.onReady();
+    }
+  },
+});
+
+export default app;

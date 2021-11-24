@@ -23,9 +23,9 @@ const interceptor = function (chain) {
 
   // console.log(`http ${method || "GET"} --> ${url} data: `, data);
 
-  return chain.proceed(requestParams).then((res) => {
-    // console.log(`http <-- ${url} result:`, res);
-    return res;
+  return chain.proceed(requestParams).then((response) => {
+    // console.log(`http <-- ${url} result:`, response);
+    return response;
   });
 };
 Taro.addInterceptor(interceptor);

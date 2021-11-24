@@ -17,6 +17,7 @@ module.exports = {
     wx: "readonly",
     defineProps: "readonly",
     defineEmits: "readonly",
+    defineExpose: "readonly",
   },
   parser: "@babel/eslint-parser",
   parserOptions: {

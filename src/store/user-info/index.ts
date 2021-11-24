@@ -11,6 +11,11 @@ export const names = {
   },
 };
 
+export type UserProfileType = {
+  encryptedData: string;
+  iv: string;
+};
+
 const initState = {
   token: "",
 };

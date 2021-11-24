@@ -35,6 +35,7 @@ import { storeKey } from "@/store";
 import Taro from "@tarojs/taro";
 
 import { Todo } from "src/components/example/models";
+import useWeappLifecycle from "@/utils/use-weapp-lifecycle";
 
 function useClickCount() {
   const clickCount = ref(0);
@@ -61,6 +62,8 @@ interface User {
 const internalInstance = getCurrentInstance()!;
 const publicInstance = internalInstance.proxy;
 const store = useStore(storeKey);
+const taroInstance = Taro.getCurrentInstance();
+const router = taroInstance.router!;
 /* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars,@typescript-eslint/require-await */
 
 const props = defineProps({
@@ -89,19 +92,22 @@ function danger(event: Event) {
 //   return Taro.createSelectorQuery().select(".example-template-comp");
 // }
 
+function onShow() {
+  console.log("example-template-comp onShow");
+}
+
+function onReady() {
+  console.log("example-template-comp onReady");
+}
+
 // Vue 的虚拟 DOM 树渲染为 Taro 的虚拟 DOM 之后触发 ，这时无法通过 createSelectorQuery 等方法获取小程序渲染层 DOM 节点
 onMounted(() => {
-  const taroInstance = Taro.getCurrentInstance();
-  const router = taroInstance.router!;
+  // console.log("example-template-comp onMounted ==============");
   Taro.nextTick(() => {
     // console.log("nextTick", !!getElement());
   });
-  Taro.eventCenter.on(router.onShow, () => {
-    // console.log("onShow", !!getElement());
-  });
-  Taro.eventCenter.on(router.onReady, () => {
-    // console.log("onReady", !!getElement());
-  });
+  Taro.eventCenter.once(router.onShow, onShow);
+  Taro.eventCenter.once(router.onReady, onReady);
 });
 </script>
 
