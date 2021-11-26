@@ -65,9 +65,8 @@ function agreeAuth() {
     mask: true,
   });
 }
-
-function goto() {
-  gotoPage({ url: path.example });
+async function goto() {
+  await gotoPage({ url: path.example });
 }
 const { onShow, onReady, weappLifecycle } = useWeappLifecycle();
 onShow(() => {

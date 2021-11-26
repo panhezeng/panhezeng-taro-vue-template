@@ -11,9 +11,9 @@
     "css": "less"
   },
   "scripts": {
-    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:weapp": "taro build --type weapp --watch",
     "dev:h5": "npm run build:h5 -- --watch",
-    "build:weapp": "taro build --type weapp",
+    "build:weapp": "cross-env NODE_ENV=production npm run lint && taro build --type weapp",
     "build:h5": "taro build --type h5",
     "lint:es": "eslint --fix --ext .js,.vue,.ts,.tsx ./",
     "lint:style": "stylelint --fix \"src*/**/*.{html,vue,css,less}\"",
@@ -38,6 +38,7 @@
     "@tarojs/webpack-runner": "^3.3.15",
     "@types/circular-dependency-plugin": "^5.0.4",
     "@types/node": "^16.11.10",
+    "cross-env": "^7.0.3",
     "webpack": "4.46.0",
     "@types/webpack-env": "^1.16.3",
     "@typescript-eslint/eslint-plugin": "^5.4.0",

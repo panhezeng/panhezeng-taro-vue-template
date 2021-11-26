@@ -35,7 +35,6 @@ import { storeKey } from "@/store";
 import Taro from "@tarojs/taro";
 
 import { Todo } from "src/components/example/models";
-import useWeappLifecycle from "@/utils/use-weapp-lifecycle";
 
 function useClickCount() {
   const clickCount = ref(0);

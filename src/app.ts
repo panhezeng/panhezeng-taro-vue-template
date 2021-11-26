@@ -11,14 +11,24 @@ const app = createApp({
 app.use(store, storeKey);
 
 app.mixin({
+  onLoad() {
+    if (this.weappLifecycle && this.weappLifecycle.onLoad) {
+      this.weappLifecycle.onLoad();
+    }
+  },
   onShow() {
-    if (this.weappLifecycle) {
+    if (this.weappLifecycle && this.weappLifecycle.onShow) {
       this.weappLifecycle.onShow();
     }
   },
   onReady() {
-    if (this.weappLifecycle) {
+    if (this.weappLifecycle && this.weappLifecycle.onReady) {
       this.weappLifecycle.onReady();
+    }
+  },
+  onHide() {
+    if (this.weappLifecycle && this.weappLifecycle.onHide) {
+      this.weappLifecycle.onHide();
     }
   },
 });
