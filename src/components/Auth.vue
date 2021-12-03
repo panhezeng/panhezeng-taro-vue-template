@@ -39,7 +39,7 @@ import { useStore } from "vuex";
 import { storeKey } from "@/store";
 
 import Taro from "@tarojs/taro";
-import { names as namesUserInfo, UserProfileType } from "@/store/user-info";
+import { UserProfileType } from "@/store/user-info";
 
 /* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars,@typescript-eslint/require-await */
 const internalInstance = getCurrentInstance()!;

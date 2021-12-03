@@ -70,14 +70,14 @@ async function goto() {
 }
 const { onShow, onReady, weappLifecycle } = useWeappLifecycle();
 onShow(() => {
-  console.log("index-page onShow");
+  // console.log("index-page onShow");
 });
 onReady(() => {
-  console.log("index-page onReady");
+  // console.log("index-page onReady");
 });
 
 onMounted(() => {
-  console.log("index-page onMounted ==============");
+  // console.log("index-page onMounted ==============");
 });
 </script>
 

@@ -6,6 +6,7 @@
     <template-comp v-bind="compProps" @template-comp-danger="eventHandler" />
     <view>stateExample:{{ example }}</view>
     <view>eventTip:{{ eventTip }}</view>
+    <example-view />
   </view>
 </template>
 
@@ -28,6 +29,7 @@ import {
 import TemplateComp from "@/components/example/TemplateComp.vue";
 import { Todo } from "@/components/example/models";
 import useWeappLifecycle from "@/utils/use-weapp-lifecycle";
+import ExampleView from "@/components/wechat-miniprogram/example-view/example-view.wxml";
 
 /* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars */
 const internalInstance = getCurrentInstance()!;
@@ -66,10 +68,10 @@ function goto() {
 
 const { onShow, onReady, weappLifecycle } = useWeappLifecycle();
 onShow(() => {
-  console.log("example-page onShow");
+  // console.log("example-page onShow");
 });
 onReady(() => {
-  console.log("example-page onReady");
+  // console.log("example-page onReady");
 });
 
 // Vue 的虚拟 DOM 树渲染为 Taro 的虚拟 DOM 之后触发 ，这时无法通过 createSelectorQuery 等方法获取小程序渲染层 DOM 节点

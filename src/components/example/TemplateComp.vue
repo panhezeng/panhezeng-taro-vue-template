@@ -1,6 +1,6 @@
 <template>
   <view class="example-template-comp">
-    <view>template-comp</view>
+    <view :style="`font-size: ${pt(30)}`">template-comp</view>
     <button type="warn" @tap="danger">danger</button>
     <view>{{ user.firstName + user.lastName }}</view>
     <view>
@@ -92,11 +92,11 @@ function danger(event: Event) {
 // }
 
 function onShow() {
-  console.log("example-template-comp onShow");
+  // console.log("example-template-comp onShow");
 }
 
 function onReady() {
-  console.log("example-template-comp onReady");
+  // console.log("example-template-comp onReady");
 }
 
 // Vue 的虚拟 DOM 树渲染为 Taro 的虚拟 DOM 之后触发 ，这时无法通过 createSelectorQuery 等方法获取小程序渲染层 DOM 节点
