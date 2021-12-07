@@ -110,7 +110,7 @@ onMounted(() => {
   Taro.eventCenter.once(router.onReady, onReady);
 });
 onBeforeUnmount(() => {
-  console.log("example-template-comp onBeforeUnmount");
+  // console.log("example-template-comp onBeforeUnmount");
 });
 </script>
 
