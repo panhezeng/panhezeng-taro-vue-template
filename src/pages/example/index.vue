@@ -29,7 +29,6 @@ import {
 import TemplateComp from "@/components/example/TemplateComp.vue";
 import { Todo } from "@/components/example/models";
 import useWeappLifecycle from "@/utils/use-weapp-lifecycle";
-import ExampleView from "@/components/wechat-miniprogram/example-view/example-view.wxml";
 
 /* eslint-disable @typescript-eslint/no-unused-vars,no-unused-vars */
 const internalInstance = getCurrentInstance()!;

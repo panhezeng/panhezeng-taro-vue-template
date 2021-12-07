@@ -1,84 +1,85 @@
 {
-  "name": "taro-vue-template",
-  "version": "1.0.0",
-  "description": "taro-vue-template",
-  "productName": "taro-vue-template",
-  "author": "panhezeng <panhezeng@gmail.com>",
-  "private": true,
-  "templateInfo": {
-    "name": "taro-vue-template",
-    "typescript": true,
-    "css": "less"
-  },
-  "scripts": {
-    "dev:weapp": "taro build --type weapp --watch",
-    "dev:h5": "npm run build:h5 -- --watch",
-    "build:weapp": "cross-env NODE_ENV=production npm run lint && taro build --type weapp",
-    "build:h5": "taro build --type h5",
-    "lint:es": "eslint --fix --ext .js,.vue,.ts,.tsx ./",
-    "lint:style": "stylelint --fix \"src*/**/*.{html,vue,css,less}\"",
-    "lint": "npm run lint:style && npm run lint:es",
-    "format": "prettier --write \"src*/**/*.{js,vue,ts,tsx,html,css,less,md,json}\"",
-    "prepare": "husky install"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.16.0",
-    "@tarojs/components": "^3.3.15",
-    "@tarojs/runtime": "^3.3.15",
-    "@tarojs/taro": "^3.3.15",
-    "query-string": "^7.0.1",
-    "vue": "^3.2.22",
-    "vuex": "^4.0.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/eslint-parser": "^7.16.0",
-    "@stylelint/postcss-css-in-js": "^0.37.2",
-    "@tarojs/mini-runner": "^3.3.15",
-    "@tarojs/webpack-runner": "^3.3.15",
-    "@types/circular-dependency-plugin": "^5.0.4",
-    "@types/node": "^16.11.10",
-    "cross-env": "^7.0.3",
-    "webpack": "4.46.0",
-    "@types/webpack-env": "^1.16.3",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
-    "@vue/compiler-sfc": "^3.2.22",
-    "babel-preset-taro": "^3.3.15",
-    "circular-dependency-plugin": "^5.2.2",
-    "eslint": "^8.3.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-taro": "^3.3.15",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.1.1",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
-    "postcss-html": "^1.2.0",
-    "postcss-less": "^5.0.0",
-    "postcss-syntax": "^0.36.2",
-    "prettier": "^2.4.1",
-    "stylelint": "^14.1.0",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^24.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-prettier": "^2.0.0",
-    "typescript": "^4.5.2",
-    "vue-loader": "^16.8.3"
-  },
-  "browserslist": {
-    "production": [
-      "chrome 49"
-    ]
-  },
-  "engines": {
-    "node": ">= 12.22",
-    "npm": ">= 6.15",
-    "yarn": ">= 1.22"
-  },
-  "lint-staged": {
-    "src*/**/*.{js,vue,ts,tsx}": "npm run lint:es",
-    "src*/**/*.{html,vue,css,less}": [
-      "npm run lint:style"
-    ]
-  }
+	"name": "taro-vue-template",
+	"version": "1.0.0",
+	"description": "taro-vue-template",
+	"productName": "taro-vue-template",
+	"author": "panhezeng <panhezeng@gmail.com>",
+	"private": true,
+	"templateInfo": {
+		"name": "taro-vue-template",
+		"typescript": true,
+		"css": "less"
+	},
+	"scripts": {
+		"dev:weapp": "taro build --type weapp --watch",
+		"dev:h5": "npm run build:h5 -- --watch",
+		"build:weapp": "cross-env NODE_ENV=production npm run lint && taro build --type weapp",
+		"build:h5": "taro build --type h5",
+		"lint:es": "eslint --fix --ext .js,.vue,.ts,.tsx ./",
+		"lint:style": "stylelint --fix \"src*/**/*.{html,vue,css,less}\"",
+		"lint": "npm run lint:style && npm run lint:es",
+		"format": "prettier --write \"src*/**/*.{js,vue,ts,tsx,html,css,less,md,json}\"",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"@babel/runtime": "^7.16.0",
+		"@tarojs/components": "3.3.16",
+		"@tarojs/runtime": "3.3.16",
+		"@tarojs/taro": "3.3.16",
+		"query-string": "^7.0.1",
+		"vue": "^3.2.22",
+		"vuex": "^4.0.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.16.0",
+		"@babel/eslint-parser": "^7.16.0",
+		"@stylelint/postcss-css-in-js": "^0.37.2",
+		"@tarojs/mini-runner": "3.3.16",
+		"@tarojs/webpack-runner": "3.3.16",
+		"@types/circular-dependency-plugin": "^5.0.4",
+		"@types/node": "^16.11.10",
+		"cross-env": "^7.0.3",
+		"webpack": "4.46.0",
+		"@types/webpack-env": "^1.16.3",
+		"@typescript-eslint/eslint-plugin": "^5.4.0",
+		"@typescript-eslint/parser": "^5.4.0",
+		"@vue/compiler-sfc": "^3.2.22",
+		"babel-preset-taro": "3.3.16",
+		"circular-dependency-plugin": "^5.2.2",
+		"eslint": "^8.3.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-config-taro": "3.3.16",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-vue": "^8.1.1",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.1.2",
+		"postcss": "^8.4.4",
+		"postcss-html": "^1.2.0",
+		"postcss-less": "^5.0.0",
+		"postcss-syntax": "^0.36.2",
+		"prettier": "^2.4.1",
+		"stylelint": "^14.1.0",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-standard": "^24.0.0",
+		"stylelint-order": "^5.0.0",
+		"stylelint-prettier": "^2.0.0",
+		"typescript": "^4.5.2",
+		"vue-loader": "^16.8.3"
+	},
+	"browserslist": {
+		"production": [
+			"chrome 49"
+		]
+	},
+	"engines": {
+		"node": ">= 12.22",
+		"npm": ">= 6.15",
+		"yarn": ">= 1.22"
+	},
+	"lint-staged": {
+		"src*/**/*.{js,vue,ts,tsx}": "npm run lint:es",
+		"src*/**/*.{html,vue,css,less}": [
+			"npm run lint:style"
+		]
+	}
 }

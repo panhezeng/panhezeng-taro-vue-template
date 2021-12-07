@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-export const eventName = {
+export const eventNames = {
   danger: "template-comp-danger",
 };
 export default {};
@@ -28,6 +28,7 @@ import {
   PropType,
   onMounted,
   getCurrentInstance,
+  onBeforeUnmount,
 } from "vue";
 import { useStore } from "vuex";
 import { storeKey } from "@/store";
@@ -76,14 +77,14 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(Object.values(eventName));
+const emit = defineEmits(Object.values(eventNames));
 
 const { clickCount, increment } = useClickCount();
 
 const { todoCount } = useDisplayTodo(toRef(props, "todos"));
 
 function danger(event: Event) {
-  emit(eventName.danger, event);
+  emit(eventNames.danger, event);
   // console.log(event:Event);
 }
 
@@ -107,6 +108,9 @@ onMounted(() => {
   });
   Taro.eventCenter.once(router.onShow, onShow);
   Taro.eventCenter.once(router.onReady, onReady);
+});
+onBeforeUnmount(() => {
+  console.log("example-template-comp onBeforeUnmount");
 });
 </script>
 
