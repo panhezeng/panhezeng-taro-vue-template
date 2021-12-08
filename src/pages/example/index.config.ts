@@ -1,7 +1,7 @@
 export default {
   navigationBarTitleText: "示例",
   usingComponents: {
-    "example-view":
+    "wm-example-view":
       "../../components/wechat-miniprogram/example-view/example-view",
   },
 };

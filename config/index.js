@@ -76,6 +76,15 @@ const config = {
     },
     webpackChain(chain) {
       setCircularDependencyPlugin(chain);
+
+      chain.module
+        .rule("vue")
+        .use("vueLoader")
+        .tap((options) => {
+          options.compilerOptions.isCustomElement = (tag) =>
+            tag.startsWith("wm-");
+          return options;
+        });
     },
   },
   h5: {

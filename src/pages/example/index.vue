@@ -6,7 +6,7 @@
     <template-comp v-bind="compProps" @template-comp-danger="eventHandler" />
     <view>stateExample:{{ example }}</view>
     <view>eventTip:{{ eventTip }}</view>
-    <example-view />
+    <wm-example-view />
   </view>
 </template>
 
