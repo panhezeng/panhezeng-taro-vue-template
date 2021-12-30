@@ -15,7 +15,7 @@
 		"dev:h5": "npm run build:h5 -- --watch",
 		"build:weapp": "cross-env NODE_ENV=production npm run lint && taro build --type weapp",
 		"build:h5": "taro build --type h5",
-		"lint:es": "eslint --fix --ext .js,.vue,.ts,.tsx ./",
+		"lint:es": "eslint --fix \"src*/**/*.{vue,js,jsx,ts,tsx}\"",
 		"lint:style": "stylelint --fix \"src*/**/*.{html,vue,css,less}\"",
 		"lint": "npm run lint:style && npm run lint:es",
 		"format": "prettier --write \"src*/**/*.{js,vue,ts,tsx,html,css,less,md,json}\"",
@@ -77,7 +77,7 @@
 		"yarn": ">= 1.22"
 	},
 	"lint-staged": {
-		"src*/**/*.{js,vue,ts,tsx}": "npm run lint:es",
+		"src*/**/*.{vue,js,jsx,ts,tsx}": "npm run lint:es",
 		"src*/**/*.{html,vue,css,less}": [
 			"npm run lint:style"
 		]
